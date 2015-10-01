@@ -11,7 +11,7 @@ class NammuController(object):
         self.view.display()
 
 
-    def onNewFileClick(self, event):
+    def newFile(self, event):
         """
         1. Check if current file in text area has unsaved changes
             1.1 Prompt user for file saving
@@ -20,6 +20,15 @@ class NammuController(object):
         3. See GitHub issue: https://github.com/UCL-RITS/nammu/issues/6
         """
         print("NammuController: Creating new file...")
+
+    def openFile(self, event):
+        print("NammuController: Opening new file...")
+
+    def saveFile(self, event):
+        print("NammuController: Saving new file...")
+
+    def closeFile(self, event):
+        print("NammuController: Closing new file...")
 
     def __getattr__(self, name):
         print "Undefined: "  + name
